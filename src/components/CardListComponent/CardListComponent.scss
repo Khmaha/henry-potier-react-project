@@ -1,0 +1,22 @@
+.card-list {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  grid-auto-flow: dense;
+  &--vertical {
+    grid-template-columns: repeat(3, 1fr);
+    @media screen and(max-width: 960px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and(max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &--horizontal {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0;
+  }
+}
